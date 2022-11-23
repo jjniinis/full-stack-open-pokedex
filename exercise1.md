@@ -1,0 +1,7 @@
+The environment for application is C# code in a game made with Unity.
+
+For creating and locally running the applications a separate Unity editor is used in addition to standard programming IDE. For building distribution builds XCode is used for iOS. For Android you need Android Software Development Kit, Native Development Kit and Java Development Kit. For testing Unity uses NUnit unit-testing framework. Tests can be run in the editor or from the command line. For linting ReSharper, or the Rider IDE which is based on it, is commonly used. ReSharper can be used from command line so it can be used as a part of CI/CD process.
+
+Unity offers their own cloud build CI system (https://unity.com/products/cloud-build). There is no need for Jenkins or GitHub Actions. Jenkins can be set up to run Unity builds, but it requires some extra steps since the Unity editor handles the builds.
+
+For team of 6 people the Unity Cloud Build should be preferable to any self-hosted setup. In a team of this size there probably is no full-time CI/CD focused person so ease of use should be priority. Since Cloud Build is part of Unity's toolkit it should be easier to set up than having to manually configure all Unity specific tasks locally.
