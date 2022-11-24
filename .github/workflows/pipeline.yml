@@ -31,4 +31,4 @@ jobs:
           start: npm run start-prod
           wait-on: http://localhost:5000
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
+      - run: flyctl deploy --remote-only -e APP_REVISION=$(git rev-parse --short HEAD)
