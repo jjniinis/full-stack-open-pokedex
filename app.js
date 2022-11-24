@@ -9,7 +9,8 @@ const RELEASE = process.env.APP_REVISION || "Undefined release";
 app.use(express.static("dist"));
 
 app.get("/health", (req, res) => {
-    res.send("ok");
+    throw "error";
+    //res.send("ok");
 })
 
 app.get('/version', (req, res) => {
