@@ -25,6 +25,9 @@ COPY . .
 RUN npm install --production=false && npm run build
 FROM debian:bullseye
 
+RUN apt-get update
+RUN apt install -y curl
+
 LABEL fly_launch_runtime="nodejs"
 
 COPY --from=builder /root/.volta /root/.volta
