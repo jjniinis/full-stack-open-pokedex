@@ -8,6 +8,7 @@ const RELEASE = process.env.APP_REVISION || "Undefined release";
 
 app.use(express.static("dist"));
 
+// for CI/CD health check
 app.get("/health", (req, res) => {
     res.send("ok");
 })
