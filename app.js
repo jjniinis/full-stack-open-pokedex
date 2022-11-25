@@ -13,6 +13,7 @@ app.get("/health", (req, res) => {
     res.send("ok");
 })
 
+// shows the Git hash of deployed version
 app.get('/version', (req, res) => {
     res.send(`${RELEASE}`)
 })
