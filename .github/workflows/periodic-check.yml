@@ -17,3 +17,4 @@ jobs:
           max-attempts: 3 # Optional, defaults to 1
           # Delay between retries
           retry-delay: 5s # Optional, only applicable to max-attempts > 1
+          ref: periodic-check
